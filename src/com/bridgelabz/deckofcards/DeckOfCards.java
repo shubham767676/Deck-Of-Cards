@@ -12,6 +12,9 @@ public class DeckOfCards {
 
 	public static ArrayList<String> deckCards = new ArrayList<String>();
 
+	/*
+	 * Method for getting Unique Deck of Cards
+	 */
 	public void deckOfCard() {
 		String[] suits = { "Clubs", "Diamonds", "Hearts", "Spades" };
 		String[] ranks = { "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "King", "Queen", "Ace" };
@@ -23,9 +26,9 @@ public class DeckOfCards {
 		 * @return : No return Value;
 		 */
 
-		for (int i = 0; i < ranks.length; i++) {
-			for (int j = 0; j < suits.length; j++) {
-				deckCards.add(ranks[i] + " -> " + suits[j]);
+		for (int i = 0; i < suits.length; i++) {
+			for (int j = 0; j < ranks.length; j++) {
+				deckCards.add(suits[i] + " of " + ranks[j]);
 			}
 		}
 		/*
@@ -38,12 +41,12 @@ public class DeckOfCards {
 	 * displaying cards
 	 */
 
-	public static void toDisplay(ArrayList<String> cardsDeck) {
+	public static void toDisplay(ArrayList<String> deckCards) {
 		System.out.println("\nCards in Deck:");
-		for (String element : cardsDeck) {
+		for (String element : deckCards) {
 			System.out.println(element);
 		}
-		System.out.println();
+
 	}
 
 }
